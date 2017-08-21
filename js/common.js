@@ -123,7 +123,7 @@ $(function() {
 				$('.thanks').css({display: "none"});
 				th.trigger("reset");
 				$.magnificPopup.close();
-				window.location.replace("tripwire.html");
+				window.location.replace("thank.html");
 			}, 2000);
 		});
 		return false;
@@ -195,7 +195,7 @@ $(function() {
 				$('form .button').css({display: "block"});
 				$('.thanks').css({display: "none"});
 				th.trigger("reset");
-				window.location.replace("tripwire.html");
+				window.location.replace("thank.html");
 			}, 500);
 		});
 		return false;

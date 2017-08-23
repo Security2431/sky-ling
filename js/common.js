@@ -134,7 +134,7 @@ $(function() {
 		//CHECK TEST
 		var testCount = 0;
 		$(function(){
-			if ($('#q1-2').is(':checked')){
+			if ($('#q1-1').is(':checked')){
 				testCount ++;
 			}
 			if ($('#q2-2').is(':checked')) {
@@ -146,22 +146,142 @@ $(function() {
 			if ($('#q4-2').is(':checked')) {
 				testCount ++;
 			}
-			if ($('#q5-1').is(':checked')) {
+			if ($('#q5-3').is(':checked')) {
 				testCount ++;
 			}
-			if ($('#q6-1').is(':checked')) {
+			if ($('#q6-2').is(':checked')) {
 				testCount ++;
 			}
-			if ($('#q7-1').is(':checked')) {
+			if ($('#q7-3').is(':checked')) {
 				testCount ++;
 			}
-			if ($('#q8-3').is(':checked')) {
+			if ($('#q8-1').is(':checked')) {
 				testCount ++;
 			}
 			if ($('#q9-1').is(':checked')) {
 				testCount ++;
 			}
-			if ($('#q10-4').is(':checked')) {
+			if ($('#q10-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q11-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q12-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q13-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q14-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q15-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q16-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q17-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q18-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q19-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q20-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q21-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q22-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q23-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q24-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q25-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q26-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q27-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q28-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q29-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q30-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q31-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q32-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q33-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q34-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q35-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q36-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q37-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q38-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q39-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q40-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q41-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q42-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q43-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q44-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q45-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q46-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q47-2').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q48-1').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q49-3').is(':checked')) {
+				testCount ++;
+			}
+			if ($('#q50-3').is(':checked')) {
 				testCount ++;
 			}
 			$("#page-test #test-res").val(testCount);

@@ -62,7 +62,7 @@ $(function() {
 		//activate next step on progressbar using the index of next_fs
 		testString = $(".test-top span").text();
 		testNumber = parseInt(testString);
-		if (testNumber == 11){
+		if (testNumber == 50){
 			$(".test-top").css('display', 'none')
 		}
 		else{

@@ -7,7 +7,8 @@ $c = true;
 if ( $method === 'POST' ) {
 
 	$project_name = "English Skype";
-	$admin_email  = "forzennn@gmail.com";
+    $admin_email  = "skyling.onschool@gmail.com";
+    $admin_email2  = "website4you.dp@gmail.com";
 	$form_subject = "Новая заявка";
 
 	foreach ( $_POST as $key => $value ) {
@@ -23,7 +24,8 @@ if ( $method === 'POST' ) {
 } else if ( $method === 'GET' ) {
 
 	$project_name = "English Skype";
-	$admin_email  = "forzennn@gmail.com";
+    $admin_email  = "skyling.onschool@gmail.com";
+    $admin_email2  = "website4you.dp@gmail.com";
 	$form_subject = "Новая заявка";
 
 	foreach ( $_GET as $key => $value ) {
@@ -49,4 +51,4 @@ $headers = "MIME-Version: 1.0" . PHP_EOL .
 'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
 'Reply-To: '.$admin_email.'' . PHP_EOL;
 
-mail($admin_email, adopt($form_subject), $message, $headers );
+mail($admin_email.", ".$admin_email2, adopt($form_subject), $message, $headers );

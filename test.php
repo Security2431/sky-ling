@@ -58,6 +58,20 @@ if (trim($_POST['vopros-48']) === "a") $test_res++;
 if (trim($_POST['vopros-49']) === "c") $test_res++;
 if (trim($_POST['vopros-50']) === "c") $test_res++;
 
+$level = '';
+
+if ($test_res <= 10) {
+  $level = "Beginner";
+} elseif ($test_res > 10 && $test_res <= 20) {
+  $level = "Elementary";
+} elseif ($test_res > 20 && $test_res <= 37) {
+  $level = "Pre-intermediate";
+} elseif ($test_res > 37 && $test_res < 45) {
+  $level = "Intermediate";
+} elseif ($test_res > 45 && $test_res <= 50) {
+  $level = "Upper-intermediate";
+}
+
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
 $mail->AddAddress($admin_email);     // Add a recipient
 $to = trim($_POST['Email']); 
@@ -73,6 +87,10 @@ $mail->Body    = '<p style="color: #000000;">Здравствуйте, спас�
 <tr style="background-color: #f8f8f8;">
 	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Результат вашего тестирования:</b></td>
 	<td style="padding: 10px; border: #e9e9e9 1px solid;">' .$test_res . ' правильных ответов.</td>
+</tr>
+<tr style="background-color: #f8f8f8;">
+	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Ваш уровень:</b></td>
+	<td style="padding: 10px; border: #e9e9e9 1px solid;">' . $level . '</td>
 </tr>
 
 <p>

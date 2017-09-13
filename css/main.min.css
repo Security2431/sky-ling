@@ -5463,7 +5463,7 @@ footer .top-menu .mail {
     text-transform: uppercase;
     margin-bottom: 10px;
     margin-right: 20px;
-    font-family: "Helvetica Neue Cyr";
+    font-family: ProximaNovaRegular,sans-serif;
     font-weight: 400;
 }
 
@@ -5484,7 +5484,7 @@ footer .top-menu .mail {
 .b-logo__text {
     margin-bottom: 16px;
     color: #000000;
-    font-family: "Helvetica Neue Cyr";
+    font-family: ProximaNovaRegular,sans-serif;
     font-size: 14px;
     font-weight: 400;
 }

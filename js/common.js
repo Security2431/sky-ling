@@ -489,7 +489,7 @@ $(function() {
 			data: th.serialize()
 		}).done(function() {    
 			setTimeout(function() {
-				window.location.replace("thank.html");
+				window.location.replace("zapis.html");
 			}, 500);
 		});
 		return false;
@@ -558,7 +558,7 @@ $(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
-			url: "send.php", //Change
+			url: "otpravka.php", //Change
 			data: th.serialize()
 		}).done(function() {
 

@@ -4,12 +4,13 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 //Script Foreach
 $c = true;
-if ( $method === 'POST' ) {
 
-	$project_name = "English Skype";
-	$admin_email  = "skyling.onschool@gmail.com";
-    $admin_email2  = "website4you.dp@gmail.com";
-	$form_subject = "Новая заявка";
+$project_name = "English Skype";
+$admin_email  = "skyling.onschool@gmail.com";
+$admin_email2  = "website4you.dp@gmail.com";
+$form_subject = "Новая заявка";
+
+if ( $method === 'POST' ) {
 
 	foreach ( $_POST as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
@@ -22,11 +23,6 @@ if ( $method === 'POST' ) {
 	}
 }
 } else if ( $method === 'GET' ) {
-
-	$project_name = "English Skype";
-	$admin_email  = "skyling.onschool@gmail.com";
-    $admin_email2  = "website4you.dp@gmail.com";
-	$form_subject = "Новая заявка";
 
 	foreach ( $_GET as $key => $value ) {
 		if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {

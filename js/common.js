@@ -117,6 +117,11 @@ $(function() {
 		}).done(function() {
 			$('form .button').css({display: "none"});
 			$('.thanks').css({display: "block"});
+			$.ajax({
+				type: "POST",
+				url: "send.php", //Change
+				data: th.serialize()
+			});
 			setTimeout(function() {
 				// Done Functions
 				$('form .button').css({display: "block"});
@@ -139,6 +144,11 @@ $(function() {
 		}).done(function() {
 			$('form .button').css({display: "none"});
 			$('.thanks').css({display: "block"});
+			$.ajax({
+				type: "POST",
+				url: "send.php", //Change
+				data: th.serialize()
+			});
 			setTimeout(function() {
 				// Done Functions
 				$('form .button').css({display: "block"});
@@ -504,6 +514,11 @@ $(function() {
 		}).done(function() {
 			$('form .button').css({display: "none"});
 			$('.thanks').css({display: "block"});
+			$.ajax({
+				type: "POST",
+				url: "send.php", //Change
+				data: th.serialize()
+			});
 			setTimeout(function() {
 				// Done Functions
 				$('form .button').css({display: "block"});
@@ -524,6 +539,11 @@ $(function() {
 		}).done(function() {
 			$('form .button').css({display: "none"});
 			$('.thanks').css({display: "block"});
+			$.ajax({
+				type: "POST",
+				url: "send.php", //Change
+				data: th.serialize()
+			});
 			setTimeout(function() {
 				// Done Functions
 				$('form .button').css({display: "block"});
@@ -554,7 +574,7 @@ $(function() {
 		}
 
 	});
-	$("form").submit(function() {
+	/*$("form").submit(function() {
 		var th = $(this);
 		$.ajax({
 			type: "POST",
@@ -564,7 +584,7 @@ $(function() {
 
 		});	
 		return false;
-	});
+	});*/
 
 
 });

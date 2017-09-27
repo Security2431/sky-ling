@@ -1,0 +1,91 @@
+2017-09-26 16:15:29	Could not access file:
+2017-09-26 16:15:29	Connection: opening to ssl://smtp.gmail.com:465, timeout=300, options=array (
+                   	                  )
+2017-09-26 16:15:29	Connection: opened
+2017-09-26 16:15:30	SERVER -> CLIENT: 220 smtp.gmail.com ESMTP e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:30	CLIENT -> SERVER: EHLO sky-ling.com
+2017-09-26 16:15:30	SERVER -> CLIENT: 250-smtp.gmail.com at your service, [2001:67c:2070:c9f5::1]
+                   	                  250-SIZE 35882577
+                   	                  250-8BITMIME
+                   	                  250-AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH
+                   	                  250-ENHANCEDSTATUSCODES
+                   	                  250-PIPELINING
+                   	                  250-CHUNKING
+                   	                  250 SMTPUTF8
+2017-09-26 16:15:30	CLIENT -> SERVER: AUTH LOGIN
+2017-09-26 16:15:30	SERVER -> CLIENT: 334 VXNlcm5hbWU6
+2017-09-26 16:15:30	CLIENT -> SERVER: c2t5bGluZy5lbWFpbHpAZ21haWwuY29t
+2017-09-26 16:15:30	SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+2017-09-26 16:15:30	CLIENT -> SERVER: MTIzNDU2Nzg5Uw==
+2017-09-26 16:15:30	SERVER -> CLIENT: 235 2.7.0 Accepted
+2017-09-26 16:15:30	CLIENT -> SERVER: MAIL FROM:<no-reply@sky-ling.com>
+2017-09-26 16:15:30	SERVER -> CLIENT: 250 2.1.0 OK e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:30	CLIENT -> SERVER: RCPT TO:<xaam1@ya.ru>
+2017-09-26 16:15:30	SERVER -> CLIENT: 250 2.1.5 OK e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:30	CLIENT -> SERVER: DATA
+2017-09-26 16:15:31	SERVER -> CLIENT: 354  Go ahead e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:31	CLIENT -> SERVER: Date: Tue, 26 Sep 2017 19:15:29 +0300
+2017-09-26 16:15:31	CLIENT -> SERVER: To: xaam1@ya.ru
+2017-09-26 16:15:31	CLIENT -> SERVER: From: =?UTF-8?B?U2t5LWxpbmcuINCo0LrQvtC70LAg0LDQvdCz0LvQuNC50YHQutC+0LPQvg==?= <no-reply@sky-ling.com>
+2017-09-26 16:15:31	CLIENT -> SERVER: Reply-To: =?UTF-8?B?U2t5LWxpbmcuINCo0LrQvtC70LAg0LDQvdCz0LvQuNC50YHQutC+0LPQvg==?= <xaam1@ya.ru>
+2017-09-26 16:15:31	CLIENT -> SERVER: Subject: =?UTF-8?B?0KDQtdC30YPQu9GM0YLQsNGC0Ysg0LLQsNGI0LXQs9C+INGC0LXRgdGC0LAg?=
+2017-09-26 16:15:31	CLIENT -> SERVER:  =?UTF-8?B?0L/QviDQsNC90LPQu9C40LnRgdC60L7QvNGDICsg0J/QvtC00LDRgNC+0Loh?=
+2017-09-26 16:15:31	CLIENT -> SERVER:  =?UTF-8?B?Kg==?=
+2017-09-26 16:15:31	CLIENT -> SERVER: Message-ID: <f35f0ace83b8a13a7f804f61427b2304@sky-ling.com>
+2017-09-26 16:15:31	CLIENT -> SERVER: X-Priority: 3
+2017-09-26 16:15:31	CLIENT -> SERVER: X-Mailer: PHPMailer 5.2.23 (https://github.com/PHPMailer/PHPMailer)
+2017-09-26 16:15:31	CLIENT -> SERVER: MIME-Version: 1.0
+2017-09-26 16:15:31	CLIENT -> SERVER: Content-Type: multipart/alternative;
+2017-09-26 16:15:31	CLIENT -> SERVER: 	boundary="b1_f35f0ace83b8a13a7f804f61427b2304"
+2017-09-26 16:15:31	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: This is a multi-part message in MIME format.
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: --b1_f35f0ace83b8a13a7f804f61427b2304
+2017-09-26 16:15:31	CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: The result of your testing: 0correct answers. As promised, we attach the articles as a gift: https://goo.gl/RMzjaQ - 6 tips for learning English words; https://goo.gl/oqjSJB - DO vs Make; https://goo.gl/AZb6bs - Read and answer questions; Our contacts: skyling.onschool@gmail.com, http://sky-ling.com/
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: --b1_f35f0ace83b8a13a7f804f61427b2304
+2017-09-26 16:15:31	CLIENT -> SERVER: Content-Type: text/html; charset=UTF-8
+2017-09-26 16:15:31	CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: <p style="color: #000000;">Здравствуйте, спасибо что прошли тест на нашем сайте!
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>Отправляем вам результаты тестирования и подарочные статьи, которые содержат в себе полезные рекомендации для самостоятельной проработки!
+2017-09-26 16:15:31	CLIENT -> SERVER: <br></p>
+2017-09-26 16:15:31	CLIENT -> SERVER: <tr style="background-color: #f8f8f8;">
+2017-09-26 16:15:31	CLIENT -> SERVER: 	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Результат вашего тестирования:</b></td>
+2017-09-26 16:15:31	CLIENT -> SERVER: 	<td style="padding: 10px; border: #e9e9e9 1px solid;">0 правильных ответов.</td>
+2017-09-26 16:15:31	CLIENT -> SERVER: </tr>
+2017-09-26 16:15:31	CLIENT -> SERVER: <tr style="background-color: #f8f8f8;">
+2017-09-26 16:15:31	CLIENT -> SERVER: 	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Ваш уровень:</b></td>
+2017-09-26 16:15:31	CLIENT -> SERVER: 	<td style="padding: 10px; border: #e9e9e9 1px solid;">Beginner</td>
+2017-09-26 16:15:31	CLIENT -> SERVER: </tr>
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: <p>
+2017-09-26 16:15:31	CLIENT -> SERVER: Как и обещали, прикрепляем статьи в подарок:
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: https://goo.gl/RMzjaQ - 6 советов по изучению английских слов
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: https://goo.gl/6DqZzc - DO vs Make
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: https://goo.gl/AZb6bs - Чтение и выполнение задания
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: Наши контакты:
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: skyling.onschool@gmail.com,
+2017-09-26 16:15:31	CLIENT -> SERVER: <br>
+2017-09-26 16:15:31	CLIENT -> SERVER: http://sky-ling.com/ </p>
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: --b1_f35f0ace83b8a13a7f804f61427b2304--
+2017-09-26 16:15:31	CLIENT -> SERVER:
+2017-09-26 16:15:31	CLIENT -> SERVER: .
+2017-09-26 16:15:31	SERVER -> CLIENT: 250 2.0.0 OK 1506442531 e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:31	CLIENT -> SERVER: QUIT
+2017-09-26 16:15:31	SERVER -> CLIENT: 221 2.0.0 closing connection e31sm1878803lji.76 - gsmtp
+2017-09-26 16:15:31	Connection: closed
+Message has been sent

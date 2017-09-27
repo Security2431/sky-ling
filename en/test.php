@@ -72,6 +72,35 @@ if ($test_res <= 10) {
   $level = "Upper-intermediate";
 }
 
+
+
+
+$mail->IsSMTP();
+//адрес smtp сервера
+$mail->Host       = "smtp.gmail.com";
+//сообщения дебагера, 0-не показываем
+$mail->SMTPDebug  = 3;
+//если сервер требует авторизации
+$mail->SMTPAuth   = true;
+//тип шифрования
+$mail->SMTPSecure = "ssl";
+//порт сервера
+$mail->Port       = 465; //465;
+//приоритет почты, 3 - нормально
+$mail->Priority    = 3;
+//кодировка
+$mail->CharSet     = 'UTF-8';
+$mail->Encoding    = '8bit';
+
+//тема письма
+$mail->Subject     = "Sky-ling. Школа английского";
+$mail->ContentType = "text/html; charset=utf-8\r\n";
+//адрес почтового ящика gmail
+$mail->Username   = "skyling.emailz@gmail.com";
+//ваш пароль от ящика
+$mail->Password   = '123456789S';
+
+
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Private English classes on Skype.');
 $mail->addAddress($admin_email);     // Add a recipient
 $to = trim($_POST['Email']); 

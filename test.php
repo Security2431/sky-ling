@@ -1,6 +1,8 @@
 <?php
 require 'libs/PHPMailer/PHPMailerAutoload.php';
 
+ob_start();
+
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $admin_email  = trim($_POST["admin_email"]);
@@ -72,6 +74,36 @@ if ($test_res <= 10) {
   $level = "Upper-intermediate";
 }
 
+
+$mail->IsSMTP();
+//адрес smtp сервера
+$mail->Host       = "smtp.gmail.com";
+//сообщения дебагера, 0-не показываем
+$mail->SMTPDebug  = 3;
+//если сервер требует авторизации
+$mail->SMTPAuth   = true;
+//тип шифрования
+$mail->SMTPSecure = "ssl";
+//порт сервера
+$mail->Port       = 465; //465;
+//приоритет почты, 3 - нормально
+$mail->Priority    = 3;
+//кодировка
+$mail->CharSet     = 'UTF-8';
+$mail->Encoding    = '8bit';
+
+//тема письма
+$mail->Subject     = "Sky-ling. Школа английского";
+$mail->ContentType = "text/html; charset=utf-8\r\n";
+//адрес почтового ящика gmail
+$mail->Username   = "skyling.emailz@gmail.com";
+//ваш пароль от ящика
+$mail->Password   = '123456789S';
+$mail->isHTML(true);
+
+
+
+
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
 $mail->AddAddress($admin_email);     // Add a recipient
 $to = trim($_POST['Email']); 
@@ -80,7 +112,8 @@ $mail->addReplyTo($to, 'Sky-ling. Школа английского');
 $mail->AddAttachment(realpath('/words.pdf'),'words.pdf','base64', 'application/pdf');
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Результаты вашего теста по английскому + Подарок!';
+$mail->Subject = 'Результаты вашего теста по английскому + Подарок!*';
+
 $mail->Body    = '<p style="color: #000000;">Здравствуйте, спасибо что прошли тест на нашем сайте! 
 <br>Отправляем вам результаты тестирования и подарочные статьи, которые содержат в себе полезные рекомендации для самостоятельной проработки!
 <br></p>
@@ -111,9 +144,21 @@ http://sky-ling.com/ </p>
 ';
 $mail->AltBody = 'The result of your testing: ' .$test_res . 'correct answers. As promised, we attach the articles as a gift: https://goo.gl/RMzjaQ - 6 tips for learning English words; https://goo.gl/oqjSJB - DO vs Make; https://goo.gl/AZb6bs - Read and answer questions; Our contacts: skyling.onschool@gmail.com, http://sky-ling.com/';
 
+
+
+
 if(!$mail->send()) {
 	echo 'Message could not be sent.';
 	echo 'Mailer Error: ' . $mail->ErrorInfo;
 } else {
 	echo 'Message has been sent';
 }
+
+$output = ob_get_contents();
+ob_end_flush();
+
+
+
+file_put_contents('logtext.txt', $output);
+
+

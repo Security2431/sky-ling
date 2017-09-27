@@ -5942,6 +5942,7 @@ form .select-wrap .sel {
     padding-left: 35px;
     background: url(../img/radio.png) no-repeat;
     line-height: 35px;
+    text-align: left;
 }
 
 #msform input[type=radio]:not(old):checked+label {

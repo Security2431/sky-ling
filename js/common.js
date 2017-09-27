@@ -488,14 +488,14 @@ $(function() {
 			if ($('#q50-3').is(':checked')) {
 				testCount ++;
 			}
-			$("#page-test #test-res").val(testCount);
-			var testMail = $("#page-test .pd-l").val();
-			$("#page-test #test-mail").val(testMail);
+			$("#page-test-en #test-res").val(testCount);
+			var testMail = $("#page-test-en .pd-l").val();
+			$("#page-test-en #test-mail").val(testMail);
 		});
     
 		$.ajax({
 			type: "POST",
-			url: "test.php", //Change
+			url: "../en/test.php", //Change
 			data: th.serialize()
 		}).done(function() {    
 			setTimeout(function() {

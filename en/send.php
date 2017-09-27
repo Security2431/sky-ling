@@ -1,5 +1,5 @@
 <?php
-require 'libs/PHPMailer/PHPMailerAutoload.php';
+require '../libs/PHPMailer/PHPMailerAutoload.php';
 
 $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
@@ -25,7 +25,7 @@ $mail->CharSet     = 'UTF-8';
 $mail->Encoding    = '8bit';
 
 //тема письма
-$mail->Subject     = "Sky-ling. Школа английского";
+$mail->Subject     = "Sky-ling. Thanks for the application! ";
 $mail->ContentType = "text/html; charset=utf-8\r\n";
 //адрес почтового ящика gmail
 $mail->Username   = "skyling.emailz@gmail.com";
@@ -33,19 +33,18 @@ $mail->Username   = "skyling.emailz@gmail.com";
 $mail->Password   = '123456789S';
 
 
-$mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
+$mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Private English classes on Skype.');
 $mail->AddAddress($admin_email);     // Add a recipient
 $to = 'no-reply@sky-ling.com'; 
-$mail->addReplyTo($to, 'Sky-ling. Школа английского');
+$mail->addReplyTo($to, 'Sky-ling. Private English classes on Skype. ');
 
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = 'Sky-ling. Благодарность за заявку!';
-$mail->Body    = '<p style="color: #000000;">Здравствуйте, спасибо что оставили заявку на нашем сайте!</p>
+$mail->Subject = 'Sky-ling.  Thanks for the application';
+$mail->Body    = '<p style="color: #000000;">Thank you for your recent request submission! We will get in touch with you within 24 hour.</p>
 <p>
 <br>
-<br>
-Наши контакты: 
+Best regards, Viktoriia Cottle 
 <br>
 skyling.onschool@gmail.com, 
 <br>

@@ -6,12 +6,12 @@ subject: My Basic Email Template Subject
   <container>
     <spacer size="16"></spacer>
     <row class="collapse">
-      <columns small="2" valign="middle">
+      <columns small="2" large="2" valign="middle">
         <img class="small-float-center" src="/assets/img/logo.jpg">
       </columns>
-      <columns small="22" valign="middle">
-        <p class="text-left">Индивидуальное обучение</p>
-        <p class="text-left">английскому языку по Skype</p>
+      <columns small="22"  large="22" valign="middle">
+        <p class="text-left header__text">Индивидуальное обучение</p>
+        <p class="text-left header__text">английскому языку по Skype</p>
       </columns>
     </row>
     <spacer size="16"></spacer>
@@ -19,11 +19,11 @@ subject: My Basic Email Template Subject
 </wrapper>
 
 <wrapper class="main">  
-  {{#bg-img src="/assets/img/image.jpg" classes="hero-header" imgwidth="680" imgheight="279" bgcolor="#3f73e8" top_padding="27" bottom_padding="15"}}
+  {{#bg-img src="/assets/img/image.jpg" classes="image" imgwidth="680" imgheight="279" bgcolor="#3f73e8" top_padding="27" bottom_padding="15"}}
     <container class="transparent">
       <spacer size="16"></spacer>
       <row>
-        <columns small="12">
+        <columns small="24" large="24">
           
           <h1 class="text-center heading"><strong>Спасибо, что прошли тест!</strong>  </h1>
           <p class="lead text-center">Вы правильно ответили на <strong>10</strong> из <strong>50</strong> вопросов. </p>
@@ -33,14 +33,14 @@ subject: My Basic Email Template Subject
             <button class="download text-center" href="http://sky-ling.com"><strong>Скачайте Ваши уроки здесь  </strong></button>
           </center>
           <row>
-            <columns small="5"> 
+            <columns small="4" large="5"> 
               <spacer size="8"></spacer>
               <img class="float-right" src="/assets/img/arrow-left.png" alt="">
             </columns>
-            <columns small="12">
+            <columns small="16" large="14">
                 <p class="details text-center">Вы можете посмотреть детали Вашего теста ниже </p>
             </columns>
-            <columns small="5"> 
+            <columns small="4" large="5"> 
               <spacer size="8"></spacer>
               <img class="float-left" src="/assets/img/arrow-right.png" alt="">
             </columns>
@@ -55,13 +55,13 @@ subject: My Basic Email Template Subject
   <container class="questions">
     <spacer size="16"></spacer>
     <row>
-      <columns large="24">
+      <columns small="24" large="24">
         <p class="question"><strong>1. She_______a teacher.</strong></p>
         <p class="answer"><small class="field correct">(a) is</small><small class="field wrong">(b) are</small><small class="field">(c) am</small></p>
       </columns>
     </row>
     <row>
-      <columns large="24">
+      <columns small="24" large="24">
         <p class="question"><strong>1. Jane introduced her husband to her boss because they ________ before</strong></p>
         <p class="answer"><small class="field correct">(a) is</small><small class="field wrong">(b) are</small><small class="field">(c) am</small></p>
       </columns>
@@ -73,10 +73,10 @@ subject: My Basic Email Template Subject
   <container>
     <spacer size="10"></spacer>
     <row class="collapse">
-      <columns small="24">
-        <menu class="small-vertical">
-          <item class="menu-item--first" href="mailto:email@gmail.com"><img class="float-left" src="/assets/img/email.jpg" alt="">email@gmail.com</item>
-          <item class="menu-item--last" href="http://sky-ling.com">Отписаться от рассылки</item>
+      <columns small="24" large="24">
+        <menu>
+          <item class="menu-item--first" href="mailto:skyling.onschool@gmail.com" valign="middle"><img class="float-left" src="/assets/img/email.jpg" alt="">skyling.onschool@gmail.com</item>
+          <item class="menu-item--last" href="http://sky-ling.com" valign="middle">Отписаться от рассылки</item>
         </menu>
       </columns>
     </row>

@@ -20,7 +20,11 @@ html,
 
 // Full Width Headers
 .header {
-  background: #f7f7f7;
+  background: #fafafa;
+}
+
+.header__text {
+  margin: 0 !important;
 }
 
 .header .columns {
@@ -89,6 +93,7 @@ p.lead {
 }
 .field.wrong {
   color: #e53935;
+  text-decoration: underline
 }
 
 .footer {
@@ -123,4 +128,11 @@ th.menu-item {
   line-height: 18px;
   color: #939393 !important;
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 488px) {
+  .menu {
+    width: auto !important;
+    margin: auto;
+  }
 }

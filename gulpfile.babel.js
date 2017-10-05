@@ -71,14 +71,12 @@ function resetPages(done) {
 // Compile Sass into CSS
 function sass() {
   return gulp.src('src/assets/scss/app.scss')
+    .pipe($.plumber())
     .pipe($.if(!PRODUCTION, $.sourcemaps.init()))
     .pipe($.sass({
       includePaths: ['node_modules/foundation-emails/scss']
     }).on('error', $.sass.logError))
-    .pipe($.if(PRODUCTION, $.uncss(
-      {
-        html: ['dist/**/*.html']
-      })))
+
     .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
     .pipe(gulp.dest('dist/css'));
 }

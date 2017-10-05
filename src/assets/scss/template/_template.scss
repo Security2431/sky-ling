@@ -1,0 +1,126 @@
+// These are the styles to make some of the templates look extra nice.
+// Feel free to remove these styles for production!
+
+// Body Styles 
+body,
+html, 
+.body {
+  background: #f3f3f3 !important;
+}
+
+.container.header {
+  background: #f3f3f3;
+}
+.container.transparent {
+  background: none !important;
+}
+.body-drip {
+  border-top: 8px solid #663399;
+}
+
+// Full Width Headers
+.header {
+  background: #f7f7f7;
+}
+
+.header .columns {
+  padding-bottom: 0;
+}
+
+.header p {
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.header .container {
+  background: transparent;
+}
+
+table.button.download table td {
+  background: #DB4A39 !important;
+  border-color: #DB4A39;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.heading {
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+}
+
+p.lead {
+  color: #fff;
+  font-size: 13px;
+  line-height: 18px;
+  color: #fff;
+}
+
+.details {
+  color: #fff;
+  font-size: 10px;
+  line-height: 14px;
+  color: #fff;
+}
+
+.status.green {
+  color: #41ff38;
+}
+.questions.container {
+  background: transparent;
+}
+.question {
+  font-size: 13px;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.field {
+  margin-right: 15px;
+  font-size: 13px;
+  line-height: 15px;
+  color: #000000;
+}
+.field.correct {
+  color: #0bc906;
+}
+.field.wrong {
+  color: #e53935;
+}
+
+.footer {
+  background: #d7d7d7;
+}
+.footer .container{
+  background: transparent;
+}
+
+.menu-item--first {
+  text-align: left !important;
+}
+.menu-item--first a {
+  font-size: 13px;
+  line-height: 10px;
+  color: #000000 !important;
+}
+.menu-item--first img {
+  margin-right: 8px;
+}
+th.menu-item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.menu-item--last {
+  text-align: right !important;
+}
+
+.menu-item--last a {
+  font-size: 12px;
+  line-height: 18px;
+  color: #939393 !important;
+  text-decoration: underline;
+}

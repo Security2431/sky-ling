@@ -1,0 +1,84 @@
+---
+subject: My Basic Email Template Subject
+---
+
+<wrapper class="header">
+  <container>
+    <spacer size="16"></spacer>
+    <row class="collapse">
+      <columns small="2" valign="middle">
+        <img class="small-float-center" src="/assets/img/logo.jpg">
+      </columns>
+      <columns small="22" valign="middle">
+        <p class="text-left">Индивидуальное обучение</p>
+        <p class="text-left">английскому языку по Skype</p>
+      </columns>
+    </row>
+    <spacer size="16"></spacer>
+  </container>
+</wrapper>
+
+<wrapper class="main">  
+  {{#bg-img src="/assets/img/image.jpg" classes="hero-header" imgwidth="680" imgheight="279" bgcolor="#3f73e8" top_padding="27" bottom_padding="15"}}
+    <container class="transparent">
+      <spacer size="16"></spacer>
+      <row>
+        <columns small="12">
+          
+          <h1 class="text-center heading"><strong>Спасибо, что прошли тест!</strong>  </h1>
+          <p class="lead text-center">Вы правильно ответили на <strong>10</strong> из <strong>50</strong> вопросов. </p>
+          <p class="lead text-center">Ваш уровень – <strong class="status green">Elementary </strong></p>
+          <p class="lead text-center">Мы подготовили персонально для Вас бесплатные материалы для улучшения Ваших знаний  </p>
+          <center>
+            <button class="download text-center" href="http://sky-ling.com"><strong>Скачайте Ваши уроки здесь  </strong></button>
+          </center>
+          <row>
+            <columns small="5"> 
+              <spacer size="8"></spacer>
+              <img class="float-right" src="/assets/img/arrow-left.png" alt="">
+            </columns>
+            <columns small="12">
+                <p class="details text-center">Вы можете посмотреть детали Вашего теста ниже </p>
+            </columns>
+            <columns small="5"> 
+              <spacer size="8"></spacer>
+              <img class="float-left" src="/assets/img/arrow-right.png" alt="">
+            </columns>
+          </row>
+          
+        </columns>
+      </row>
+    </container>
+  {{/bg-img}}
+</wrapper>
+<wrapper class="secondary">
+  <container class="questions">
+    <spacer size="16"></spacer>
+    <row>
+      <columns large="24">
+        <p class="question"><strong>1. She_______a teacher.</strong></p>
+        <p class="answer"><small class="field correct">(a) is</small><small class="field wrong">(b) are</small><small class="field">(c) am</small></p>
+      </columns>
+    </row>
+    <row>
+      <columns large="24">
+        <p class="question"><strong>1. Jane introduced her husband to her boss because they ________ before</strong></p>
+        <p class="answer"><small class="field correct">(a) is</small><small class="field wrong">(b) are</small><small class="field">(c) am</small></p>
+      </columns>
+    </row>
+  </container>
+</wrapper>
+
+<wrapper class="footer">
+  <container>
+    <spacer size="10"></spacer>
+    <row class="collapse">
+      <columns small="24">
+        <menu class="small-vertical">
+          <item class="menu-item--first" href="mailto:email@gmail.com"><img class="float-left" src="/assets/img/email.jpg" alt="">email@gmail.com</item>
+          <item class="menu-item--last" href="http://sky-ling.com">Отписаться от рассылки</item>
+        </menu>
+      </columns>
+    </row>
+  </container>
+</wrapper>

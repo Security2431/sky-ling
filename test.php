@@ -1,5 +1,7 @@
 <?php
 require 'libs/PHPMailer/PHPMailerAutoload.php';
+require 'libs/localization/test.ru.php';
+require 'libs/email_template.php';
 
 ob_start();
 
@@ -7,58 +9,113 @@ $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 $admin_email  = trim($_POST["admin_email"]);
 
-$test_res = 0;
+$total_questions = 50;
 
-if (trim($_POST['vopros-1']) === "a") $test_res++;
-if (trim($_POST['vopros-2']) === "b") $test_res++;
-if (trim($_POST['vopros-3']) === "b") $test_res++;
-if (trim($_POST['vopros-4']) === "b") $test_res++;
-if (trim($_POST['vopros-5']) === "c") $test_res++;
-if (trim($_POST['vopros-6']) === "b") $test_res++;
-if (trim($_POST['vopros-7']) === "c") $test_res++;
-if (trim($_POST['vopros-8']) === "a") $test_res++;
-if (trim($_POST['vopros-9']) === "a") $test_res++;
-if (trim($_POST['vopros-10']) === "c") $test_res++;
-if (trim($_POST['vopros-11']) === "b") $test_res++;
-if (trim($_POST['vopros-12']) === "b") $test_res++;
-if (trim($_POST['vopros-13']) === "b") $test_res++;
-if (trim($_POST['vopros-14']) === "a") $test_res++;
-if (trim($_POST['vopros-15']) === "a") $test_res++;
-if (trim($_POST['vopros-16']) === "c") $test_res++;
-if (trim($_POST['vopros-17']) === "c") $test_res++;
-if (trim($_POST['vopros-18']) === "a") $test_res++;
-if (trim($_POST['vopros-19']) === "b") $test_res++;
-if (trim($_POST['vopros-20']) === "c") $test_res++;
-if (trim($_POST['vopros-21']) === "c") $test_res++;
-if (trim($_POST['vopros-22']) === "b") $test_res++;
-if (trim($_POST['vopros-23']) === "b") $test_res++;
-if (trim($_POST['vopros-24']) === "a") $test_res++;
-if (trim($_POST['vopros-25']) === "b") $test_res++;
-if (trim($_POST['vopros-26']) === "b") $test_res++;
-if (trim($_POST['vopros-27']) === "a") $test_res++;
-if (trim($_POST['vopros-28']) === "a") $test_res++;
-if (trim($_POST['vopros-29']) === "b") $test_res++;
-if (trim($_POST['vopros-30']) === "b") $test_res++;
-if (trim($_POST['vopros-31']) === "b") $test_res++;
-if (trim($_POST['vopros-32']) === "a") $test_res++;
-if (trim($_POST['vopros-33']) === "c") $test_res++;
-if (trim($_POST['vopros-34']) === "a") $test_res++;
-if (trim($_POST['vopros-35']) === "a") $test_res++;
-if (trim($_POST['vopros-36']) === "b") $test_res++;
-if (trim($_POST['vopros-37']) === "a") $test_res++;
-if (trim($_POST['vopros-38']) === "b") $test_res++;
-if (trim($_POST['vopros-39']) === "a") $test_res++;
-if (trim($_POST['vopros-40']) === "b") $test_res++;
-if (trim($_POST['vopros-41']) === "b") $test_res++;
-if (trim($_POST['vopros-42']) === "a") $test_res++;
-if (trim($_POST['vopros-43']) === "b") $test_res++;
-if (trim($_POST['vopros-44']) === "a") $test_res++;
-if (trim($_POST['vopros-45']) === "b") $test_res++;
-if (trim($_POST['vopros-46']) === "a") $test_res++;
-if (trim($_POST['vopros-47']) === "b") $test_res++;
-if (trim($_POST['vopros-48']) === "a") $test_res++;
-if (trim($_POST['vopros-49']) === "c") $test_res++;
-if (trim($_POST['vopros-50']) === "c") $test_res++;
+$test_res = 0;
+$answer_list = array(
+  "a",
+  "b",
+  "b",
+  "b",
+  "c",
+  "b",
+  "c",
+  "a",
+  "a",
+  "c",
+  "b",
+  "b",
+  "b",
+  "a",
+  "a",
+  "c",
+  "c",
+  "a",
+  "b",
+  "c",
+  "c",
+  "b",
+  "b",
+  "a",
+  "b",
+  "b",
+  "a",
+  "a",
+  "b",
+  "b",
+  "b",
+  "a",
+  "c",
+  "a",
+  "a",
+  "b",
+  "a",
+  "b",
+  "a",
+  "b",
+  "b",
+  "a",
+  "b",
+  "a",
+  "b",
+  "a",
+  "b",
+  "a",
+  "c",
+  "c"
+  );
+$user_answers = array();
+
+if (trim($_POST['vopros-1']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-1']));}
+if (trim($_POST['vopros-2']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-2']));}
+if (trim($_POST['vopros-3']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-3']));}
+if (trim($_POST['vopros-4']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-4']));}
+if (trim($_POST['vopros-5']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-5']));}
+if (trim($_POST['vopros-6']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-6']));}
+if (trim($_POST['vopros-7']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-7']));}
+if (trim($_POST['vopros-8']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-8']));}
+if (trim($_POST['vopros-9']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-9']));}
+if (trim($_POST['vopros-10']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-10']));}
+if (trim($_POST['vopros-11']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-11']));}
+if (trim($_POST['vopros-12']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-12']));}
+if (trim($_POST['vopros-13']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-13']));}
+if (trim($_POST['vopros-14']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-14']));}
+if (trim($_POST['vopros-15']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-15']));}
+if (trim($_POST['vopros-16']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-16']));}
+if (trim($_POST['vopros-17']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-17']));}
+if (trim($_POST['vopros-18']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-18']));}
+if (trim($_POST['vopros-19']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-19']));}
+if (trim($_POST['vopros-20']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-20']));}
+if (trim($_POST['vopros-21']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-21']));}
+if (trim($_POST['vopros-22']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-22']));}
+if (trim($_POST['vopros-23']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-23']));}
+if (trim($_POST['vopros-24']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-24']));}
+if (trim($_POST['vopros-25']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-25']));}
+if (trim($_POST['vopros-26']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-26']));}
+if (trim($_POST['vopros-27']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-27']));}
+if (trim($_POST['vopros-28']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-28']));}
+if (trim($_POST['vopros-29']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-29']));}
+if (trim($_POST['vopros-30']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-30']));}
+if (trim($_POST['vopros-31']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-31']));}
+if (trim($_POST['vopros-32']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-32']));}
+if (trim($_POST['vopros-33']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-33']));}
+if (trim($_POST['vopros-34']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-34']));}
+if (trim($_POST['vopros-35']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-35']));}
+if (trim($_POST['vopros-36']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-36']));}
+if (trim($_POST['vopros-37']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-37']));}
+if (trim($_POST['vopros-38']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-38']));}
+if (trim($_POST['vopros-39']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-39']));}
+if (trim($_POST['vopros-40']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-40']));}
+if (trim($_POST['vopros-41']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-41']));}
+if (trim($_POST['vopros-42']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-42']));}
+if (trim($_POST['vopros-43']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-43']));}
+if (trim($_POST['vopros-44']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-44']));}
+if (trim($_POST['vopros-45']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-45']));}
+if (trim($_POST['vopros-46']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-46']));}
+if (trim($_POST['vopros-47']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-47']));}
+if (trim($_POST['vopros-48']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-48']));}
+if (trim($_POST['vopros-49']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-49']));}
+if (trim($_POST['vopros-50']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-50']));}
 
 $level = '';
 
@@ -73,7 +130,6 @@ if ($test_res <= 10) {
 } elseif ($test_res > 45 && $test_res <= 50) {
   $level = "Upper-intermediate";
 }
-
 
 $mail->IsSMTP();
 //адрес smtp сервера
@@ -101,8 +157,10 @@ $mail->Username   = "skyling.emailz@gmail.com";
 $mail->Password   = '123456789S';
 $mail->isHTML(true);
 
-
-
+// Replace with values
+$data["answers"] = preg_replace('/\{{' . 'correct' .  '\}}/i', $test_res, $data["answers"]);
+$data["answers"] = preg_replace('/\{{' . 'total' .  '\}}/i', $total_questions, $data["answers"]);
+$data["level"]["value"] = preg_replace('/\{{' . 'correct' .  '\}}/i', $level, $data["level"]["value"]);
 
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
 $mail->AddAddress($admin_email);     // Add a recipient
@@ -114,34 +172,8 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Результаты вашего теста по английскому + Подарок!*';
 
-$mail->Body    = '<p style="color: #000000;">Здравствуйте, спасибо что прошли тест на нашем сайте! 
-<br>Отправляем вам результаты тестирования и подарочные статьи, которые содержат в себе полезные рекомендации для самостоятельной проработки!
-<br></p>
-<tr style="background-color: #f8f8f8;">
-	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Результат вашего тестирования:</b></td>
-	<td style="padding: 10px; border: #e9e9e9 1px solid;">' .$test_res . ' правильных ответов.</td>
-</tr>
-<tr style="background-color: #f8f8f8;">
-	<td style="padding: 10px; border: #e9e9e9 1px solid;"><b>Ваш уровень:</b></td>
-	<td style="padding: 10px; border: #e9e9e9 1px solid;">' . $level . '</td>
-</tr>
+$mail->Body = $NewsLetterClass->generateHTMLLetter($data, $answer_list, $user_answers);
 
-<p>
-Как и обещали, прикрепляем статьи в подарок:
-<br>
-https://goo.gl/RMzjaQ - 6 советов по изучению английских слов
-<br>
-https://goo.gl/6DqZzc - DO vs Make
-<br>
-https://goo.gl/AZb6bs - Чтение и выполнение задания
-<br>
-<br>
-Наши контакты: 
-<br>
-skyling.onschool@gmail.com, 
-<br>
-http://sky-ling.com/ </p>
-';
 $mail->AltBody = 'The result of your testing: ' .$test_res . 'correct answers. As promised, we attach the articles as a gift: https://goo.gl/RMzjaQ - 6 tips for learning English words; https://goo.gl/oqjSJB - DO vs Make; https://goo.gl/AZb6bs - Read and answer questions; Our contacts: skyling.onschool@gmail.com, http://sky-ling.com/';
 
 

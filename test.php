@@ -160,7 +160,7 @@ $mail->isHTML(true);
 // Replace with values
 $data["answers"] = preg_replace('/\{{' . 'correct' .  '\}}/i', $test_res, $data["answers"]);
 $data["answers"] = preg_replace('/\{{' . 'total' .  '\}}/i', $total_questions, $data["answers"]);
-$data["level"]["value"] = preg_replace('/\{{' . 'correct' .  '\}}/i', $level, $data["level"]["value"]);
+$data["level"]["value"] = preg_replace('/\{{' . 'level' .  '\}}/i', $level, $data["level"]["value"]);
 
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
 $mail->AddAddress($admin_email);     // Add a recipient
@@ -172,7 +172,8 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Результаты вашего теста по английскому + Подарок!*';
 
-$mail->Body = $NewsLetterClass->generateHTMLLetter($data, $answer_list, $user_answers);
+$NewsLetterClass    = new NewsLetterClass();
+$mail->Body         = $NewsLetterClass->generateHTMLLetter($data);
 
 $mail->AltBody = 'The result of your testing: ' .$test_res . 'correct answers. As promised, we attach the articles as a gift: https://goo.gl/RMzjaQ - 6 tips for learning English words; https://goo.gl/oqjSJB - DO vs Make; https://goo.gl/AZb6bs - Read and answer questions; Our contacts: skyling.onschool@gmail.com, http://sky-ling.com/';
 

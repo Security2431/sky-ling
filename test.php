@@ -118,65 +118,63 @@ array_push($user_answers, trim($_POST['vopros-49']));
 array_push($user_answers, trim($_POST['vopros-50']));
 
 
-if (trim($_POST['vopros-1']) === "a") $test_res++;
-if (trim($_POST['vopros-2']) === "b") $test_res++;
-if (trim($_POST['vopros-3']) === "b") $test_res++;
-if (trim($_POST['vopros-4']) === "b") $test_res++;
-if (trim($_POST['vopros-5']) === "c") $test_res++;
+array_push($user_answers, trim($_POST['vopros-1'])); 
+array_push($user_answers, trim($_POST['vopros-2']));
+array_push($user_answers, trim($_POST['vopros-3']));
+array_push($user_answers, trim($_POST['vopros-4']));
+array_push($user_answers, trim($_POST['vopros-5']));
 
-if (trim($_POST['vopros-6']) === "b") $test_res++;
-if (trim($_POST['vopros-7']) === "c") $test_res++;
-if (trim($_POST['vopros-8']) === "a") $test_res++;
-if (trim($_POST['vopros-9']) === "a") $test_res++;
-if (trim($_POST['vopros-10']) === "c") $test_res++;
+if (trim($_POST['vopros-1']) === "a") {$test_res++;}
+if (trim($_POST['vopros-2']) === "b") {$test_res++;}
+if (trim($_POST['vopros-3']) === "b") {$test_res++;}
+if (trim($_POST['vopros-4']) === "b") {$test_res++;}
+if (trim($_POST['vopros-5']) === "c") {$test_res++;}
 
-if (trim($_POST['vopros-11']) === "b") $test_res++;
-if (trim($_POST['vopros-12']) === "b") $test_res++;
-if (trim($_POST['vopros-13']) === "b") $test_res++;
-if (trim($_POST['vopros-14']) === "a") $test_res++;
-if (trim($_POST['vopros-15']) === "a") $test_res++;
+if (trim($_POST['vopros-6']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-6']));}
+if (trim($_POST['vopros-7']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-7']));}
+if (trim($_POST['vopros-8']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-8']));}
+if (trim($_POST['vopros-9']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-9']));}
+if (trim($_POST['vopros-10']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-10']));}
 
-if (trim($_POST['vopros-16']) === "c") $test_res++;
-if (trim($_POST['vopros-17']) === "c") $test_res++;
-if (trim($_POST['vopros-18']) === "a") $test_res++;
-if (trim($_POST['vopros-19']) === "b") $test_res++;
-if (trim($_POST['vopros-20']) === "c") $test_res++;
+if (trim($_POST['vopros-12']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-12']));}
+if (trim($_POST['vopros-13']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-13']));}
+if (trim($_POST['vopros-14']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-14']));}
+if (trim($_POST['vopros-15']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-15']));}
+if (trim($_POST['vopros-16']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-16']));}
 
-if (trim($_POST['vopros-21']) === "c") $test_res++;
-if (trim($_POST['vopros-22']) === "b") $test_res++;
-if (trim($_POST['vopros-23']) === "b") $test_res++;
-if (trim($_POST['vopros-24']) === "a") $test_res++;
-if (trim($_POST['vopros-25']) === "b") $test_res++;
+if (trim($_POST['vopros-18']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-18']));}
+if (trim($_POST['vopros-19']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-19']));}
+if (trim($_POST['vopros-20']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-20']));}
+if (trim($_POST['vopros-21']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-21']));}
+if (trim($_POST['vopros-22']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-22']));}
 
-if (trim($_POST['vopros-26']) === "b") $test_res++;
-if (trim($_POST['vopros-27']) === "a") $test_res++;
-if (trim($_POST['vopros-28']) === "a") $test_res++;
-if (trim($_POST['vopros-29']) === "b") $test_res++;
-if (trim($_POST['vopros-30']) === "b") $test_res++;
+if (trim($_POST['vopros-24']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-24']));}
+if (trim($_POST['vopros-25']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-25']));}
+if (trim($_POST['vopros-26']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-26']));}
+if (trim($_POST['vopros-27']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-27']));}
+if (trim($_POST['vopros-28']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-28']));}
 
-if (trim($_POST['vopros-31']) === "b") $test_res++;
-if (trim($_POST['vopros-32']) === "a") $test_res++;
-if (trim($_POST['vopros-33']) === "c") $test_res++;
-if (trim($_POST['vopros-34']) === "a") $test_res++;
-if (trim($_POST['vopros-35']) === "a") $test_res++;
+if (trim($_POST['vopros-30']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-30']));}
+if (trim($_POST['vopros-31']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-31']));}
+if (trim($_POST['vopros-32']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-32']));}
+if (trim($_POST['vopros-33']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-33']));}
+if (trim($_POST['vopros-34']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-34']));}
 
-if (trim($_POST['vopros-36']) === "b") $test_res++;
-if (trim($_POST['vopros-37']) === "a") $test_res++;
-if (trim($_POST['vopros-38']) === "b") $test_res++;
-if (trim($_POST['vopros-39']) === "a") $test_res++;
-if (trim($_POST['vopros-40']) === "b") $test_res++;
+if (trim($_POST['vopros-36']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-36']));}
+if (trim($_POST['vopros-37']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-37']));}
+if (trim($_POST['vopros-38']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-38']));}
+if (trim($_POST['vopros-39']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-39']));}
+if (trim($_POST['vopros-40']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-40']));}
 
-if (trim($_POST['vopros-41']) === "b") $test_res++;
-if (trim($_POST['vopros-42']) === "a") $test_res++;
-if (trim($_POST['vopros-43']) === "b") $test_res++;
-if (trim($_POST['vopros-44']) === "a") $test_res++;
-if (trim($_POST['vopros-45']) === "b") $test_res++;
+if (trim($_POST['vopros-42']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-42']));}
+if (trim($_POST['vopros-43']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-43']));}
+if (trim($_POST['vopros-44']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-44']));}
+if (trim($_POST['vopros-45']) === "b") {$test_res++; array_push($user_answers, trim($_POST['vopros-45']));}
+if (trim($_POST['vopros-46']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-46']));}
 
-if (trim($_POST['vopros-46']) === "a") $test_res++;
-if (trim($_POST['vopros-47']) === "b") $test_res++;
-if (trim($_POST['vopros-48']) === "a") $test_res++;
-if (trim($_POST['vopros-49']) === "c") $test_res++;
-if (trim($_POST['vopros-50']) === "c") $test_res++;
+if (trim($_POST['vopros-48']) === "a") {$test_res++; array_push($user_answers, trim($_POST['vopros-48']));}
+if (trim($_POST['vopros-49']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-49']));}
+if (trim($_POST['vopros-50']) === "c") {$test_res++; array_push($user_answers, trim($_POST['vopros-50']));}
 
 $level = '';
 

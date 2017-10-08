@@ -69,21 +69,27 @@ $user_answers = array();
 
 for ($i = 0; $i < 50; $i++) {
   array_push($user_answers, trim($_POST['vopros-' . ($i + 1)])); 
-  if (trim($_POST['vopros-' . ($i + 1)]) ===$answer_list[$i]) {$test_res++;}
+  if (trim($_POST['vopros-' . ($i + 1)]) === $answer_list[$i]) { $test_res++; }
 }
 
 $level = '';
+$levelLink = '';
 
 if ($test_res <= 10) {
   $level = "Beginner";
+  $levelLink = $data["level"]["links"]["beginner"];
 } elseif ($test_res > 10 && $test_res <= 20) {
   $level = "Elementary";
+  $levelLink = $data["level"]["links"]["elementary"];
 } elseif ($test_res > 20 && $test_res <= 37) {
   $level = "Pre-intermediate";
+  $levelLink = $data["level"]["links"]["pre-intermediate"];
 } elseif ($test_res > 37 && $test_res < 45) {
   $level = "Intermediate";
+  $levelLink = $data["level"]["links"]["intermediate"];
 } elseif ($test_res > 45 && $test_res <= 50) {
   $level = "Upper-intermediate";
+  $levelLink = $data["level"]["links"]["upper-intermediate"];
 }
 
 $mail->IsSMTP();
@@ -116,6 +122,8 @@ $mail->isHTML(true);
 $data["answers"] = preg_replace('/\{{' . 'correct' .  '\}}/i', $test_res, $data["answers"]);
 $data["answers"] = preg_replace('/\{{' . 'total' .  '\}}/i', $total_questions, $data["answers"]);
 $data["level"]["value"] = preg_replace('/\{{' . 'level' .  '\}}/i', $level, $data["level"]["value"]);
+$data["level"]["value"] = preg_replace('/\{{' . 'level' .  '\}}/i', $level, $data["level"]["value"]);
+$data["btn"]["href"] = preg_replace('/\{{' . 'download' .  '\}}/i', $levelLink, $data["btn"]["href"]);
 
 $mail->setFrom('no-reply@sky-ling.com', 'Sky-ling. Школа английского');
 $mail->AddAddress($admin_email);     // Add a recipient

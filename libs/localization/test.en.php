@@ -11,18 +11,21 @@ $data = array(
   "answers" => "You have correctly answered <strong>{{correct}}</strong> out of <strong>{{total}}</strong> questions.",
   "level" => array(
     "text" => "Your level is ",
-    "value" => "{{level}}"
+    "value" => "{{level}}",
+    "links" => array(
+      "beginner" => $_SERVER["HTTP_HOST"] . "/downloads/Beginner.rar",
+      "elementary" => $_SERVER["HTTP_HOST"] . "/downloads/Elementary.rar",
+      "pre-intermediate" => $_SERVER["HTTP_HOST"] . "/downloads/Pre-intermediate.rar",
+      "intermediate" => $_SERVER["HTTP_HOST"] . "/downloads/Intermediate.rar",
+      "upper-intermediate" => $_SERVER["HTTP_HOST"] . "/downloads/Upper-intermediate.rar",
+    )
   ),
   "descr" => "We would like to give you your personalized materials for improving your skills.",
   "btn" => array(
     "text" => "Collect your gift here.",
-    "href" => "http://sky-ling.com"
+    "href" => "{{download}}"
   ),
   "details" => "You can see the details of your test below.",
-  "unsubscribe" => array(
-    "text" => "Unsubscribe",
-    "href" => "http://sky-ling.com/"
-  ),
   "email" => array(
     "text" => "skyling.onschool@gmail.com",
     "href" =>"mailto:skyling.onschool@gmail.com"

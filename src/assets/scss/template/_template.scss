@@ -27,6 +27,10 @@ html,
   margin: 0 !important;
 }
 
+.header__text--first {
+  margin-top: 7px !important;
+}
+
 .header .columns {
   padding-bottom: 0;
 }
@@ -47,7 +51,7 @@ html,
 table.button.download table td {
   background: #DB4A39 !important;
   border-color: #DB4A39;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 18px;
 }
 
@@ -104,11 +108,12 @@ p.lead {
 }
 
 .menu-item--first {
+  padding: 15px 10px 10px 10px;
   text-align: left !important;
 }
 .menu-item--first a {
-  font-size: 13px;
-  line-height: 10px;
+  font-size: 12px;
+  line-height: 18px;
   color: #000000 !important;
 }
 .menu-item--first img {
@@ -125,7 +130,14 @@ th.menu-item {
 
 .menu-item--last a {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 10px;
+  color: #939393 !important;
+  text-decoration: underline;
+}
+
+.menu-item--first small {
+  font-size: 12px;
+  line-height: 10px;
   color: #939393 !important;
   text-decoration: underline;
 }

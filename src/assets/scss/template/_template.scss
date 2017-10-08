@@ -148,3 +148,46 @@ th.menu-item {
     margin: auto;
   }
 }
+.nav-link {
+  font-size: 13px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.nav-link--1 {
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: #000000 !important;
+  }
+}
+
+.nav-link--1 img {
+  margin-right: 10px;
+}
+
+.nav-link--2 {
+  color: #939393 !important;
+  font-size: 12px;
+  text-decoration: underline;
+  text-align: right;
+}
+
+.nav-link--2 {
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: #939393 !important;
+  }
+}
+
+.nav-row {
+  margin: 0 !important;
+  line-height: 10px !important;
+}
+.nav-row--2 {
+  text-align: right;
+}

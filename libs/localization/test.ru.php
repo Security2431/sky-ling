@@ -1,5 +1,7 @@
 <?php
 $data = array(
+  "sever" => $_SERVER["HTTP_HOST"],
+  "lang" => "ru",
   "title" => "Результаты пройденного теста",
   "logo" => array(
     "Индивидуальное обучение",
@@ -20,6 +22,10 @@ $data = array(
   "unsubscribe" => array(
     "text" => "Отписаться от рассылки",
     "href" => "http://sky-ling.com/"
+  ),
+  "email" => array(
+    "text" => "skyling.onschool@gmail.com",
+    "href" =>"mailto:skyling.onschool@gmail.com"
   ),
   "test" => array(
     array(
@@ -425,10 +431,6 @@ $data = array(
         "c" => "(c) would’ve arrived"
       )
     ),
-  ),
-  "email" => array(
-    "text" => "skyling.onschool@gmail.com",
-    "href" =>"mailto:skyling.onschool@gmail.com"
   ),
 );
 

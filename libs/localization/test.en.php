@@ -1,25 +1,31 @@
 <?php
 $data = array(
+  "sever" => $_SERVER["HTTP_HOST"],
+  "lang" => "en",
   "title" => "Results of the passed test",
   "logo" => array(
-    "Индивидуальное обучение",
-    "английскому языку по Skype"
+    "SkyLing",
+    "Private English classes on Skype"
   ),
-  "heading" => "Спасибо, что прошли тест!",
-  "answers" => "Вы правильно ответили на <strong>{{correct}}</strong> из <strong>{{total}}</strong>",
+  "heading" => "Hi,Thank you for taking the test!",
+  "answers" => "You have correctly answered <strong>{{correct}}</strong> out of <strong>{{total}}</strong> questions.",
   "level" => array(
-    "text" => "Ваш уровень – ",
+    "text" => "Your level is ",
     "value" => "{{level}}"
   ),
-  "descr" => "Мы подготовили персонально для Вас бесплатные материалы для улучшения Ваших знаний",
+  "descr" => "We would like to give you your personalized materials for improving your skills.",
   "btn" => array(
-    "text" => "Скачайте Ваши уроки здесь",
+    "text" => "Collect your gift here.",
     "href" => "http://sky-ling.com"
   ),
-  "details" => "Вы можете посмотреть детали Вашего теста ниже",
+  "details" => "You can see the details of your test below.",
   "unsubscribe" => array(
-    "text" => "Отписаться от рассылки",
+    "text" => "Unsubscribe",
     "href" => "http://sky-ling.com/"
+  ),
+  "email" => array(
+    "text" => "skyling.onschool@gmail.com",
+    "href" =>"mailto:skyling.onschool@gmail.com"
   ),
   "test" => array(
     array(
@@ -425,10 +431,6 @@ $data = array(
         "c" => "(c) would’ve arrived"
       )
     ),
-  ),
-  "email" => array(
-    "text" => "skyling.onschool@gmail.com",
-    "href" =>"mailto:skyling.onschool@gmail.com"
   ),
 );
 
